@@ -2,6 +2,7 @@ import React from "react";
 import Routes from "./routes";
 import { Layout, Menu, Breadcrumb, Icon } from "antd";
 import "./HomePage.less";
+import { Link } from "react-router-dom";
 
 const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
@@ -18,7 +19,7 @@ class HomePage extends React.Component {
               height: "31px",
               background: "#ccc",
               margin: "16px 28px 16px 0",
-              float: 'left'
+              float: "left"
             }}
           />
           <Menu
@@ -49,8 +50,12 @@ class HomePage extends React.Component {
                   </span>
                 }
               >
-                <Menu.Item key="1">option1</Menu.Item>
-                <Menu.Item key="2">option2</Menu.Item>
+                <Menu.Item key="">
+                  <Link to="/subnav1/Option1">option1</Link>
+                </Menu.Item>
+                <Menu.Item key="2">
+                  <Link to="/subnav1/Option2">option2</Link>
+                </Menu.Item>
                 <Menu.Item key="3">option3</Menu.Item>
                 <Menu.Item key="4">option4</Menu.Item>
               </SubMenu>
@@ -98,7 +103,7 @@ class HomePage extends React.Component {
                 minHeight: 280
               }}
             >
-              Content
+              <Routes {...this.props} />
             </Content>
           </Layout>
         </Layout>
