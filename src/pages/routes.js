@@ -10,7 +10,7 @@ const routes = ({ match }) =>
     <Route exact path="/subnav1/Option1" component={Option1} />
     <Route exact path="/subnav1/Option2" component={Option2} />
 
-    {/* <Route component={Page404} /> */}
+    <Route component={Page404} />
   </Switch>;
 
 export default routes;
